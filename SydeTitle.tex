@@ -1,0 +1,70 @@
+
+%% Use the command "\input{SydeTitle}" in your main file to include this file.
+
+\begin{titlepage}
+	\makeatletter % use .cls usage for <at>
+	
+	\pagestyle{empty}
+	\equalmargins
+	
+	\ifthenelse{\equal{\@titlestyle}{work}}{
+		\begin{center}
+			\vspace*{2em}
+
+			University of Waterloo\\
+			Faculty of Engineering\\
+			Department of Systems Design Engineering
+
+			\null\vfill
+		
+			\Huge\@title \\
+			\ifdefined \@subtitle \Large\@subtitle \\ \fi
+			\normalsize
+
+			\null\vfill
+		
+			\@company\\
+			\@companyaddress \vspace{2em}
+		
+			\@author\\
+			\@date
+		\end{center}
+	}{\relax} % end if
+	
+	\ifthenelse{\equal{\@titlestyle}{design}}{
+		\begin{center}
+			\vspace*{5em}
+	
+			\Huge\@title \\
+			\ifdefined \@subtitle \Large\@subtitle \\ \fi
+			\normalsize
+	
+			\vfill
+		
+			A Report Submitted in Partial Fulfilment\\
+			of the Requirements for \@coursecode \vspace{4em}
+		
+			\ifdefined \@groupname \@groupname \\ \fi
+		  \@author \\
+			\ifdefined \@authortwo \@authortwo \\ \fi
+			\ifdefined \@authorthree \@authorthree \\ \fi
+			\ifdefined \@authorfour \@authorfour \\ \fi
+		  \vspace{3em}
+		
+			Faculty of Engineering \\
+			\ifdefined \@department Department of \@department \\ \fi
+			\vspace{3em}
+		
+			\@date \\
+			
+			\ifdefined \@instructor Course Instructor: \@instructor \\ \fi
+			\ifdefined \@supervisor Project Supervisor: \@supervisor \\ \fi
+			
+		\end{center}
+	}{\relax} % end if
+	
+	\makeatother % return to document usage for <at>
+\end{titlepage}
+
+%\pagestyle{plain}
+%\offsetmargins

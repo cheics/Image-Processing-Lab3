@@ -1,0 +1,4 @@
+# ignore all genrated files
+report.*
+# except hand maintained report.tex
+!report.tex
