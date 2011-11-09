@@ -386,10 +386,6 @@ The blurred image is simply a blurred version of the original image, created usi
 \subsection{Noise and image restoration using the inverse}
 Gaussian noise has been added to the image after it has been blurred. Applying the inverse blur operation may not be able to restore the image to it's original state.
 
-\subsubsection{}
-
-
-
 \begin{figure}[ht]
 \centering
 	\subfigure[Blurred image; PSNR +16.90]{
@@ -403,7 +399,21 @@ Gaussian noise has been added to the image after it has been blurred. Applying t
 	}
 \end{figure}
 
-\subsection{Section3}
+
+\subsubsection{Compare the restored image with the restored image from the previous step. How does the restored
+image and the PSNR differ from the previous restored image? Is it better or worse? Why?}
+
+This restored image looks nothing like the original image. While the blurred images with and without noise appear very similar and have very similar PSNR values; the addition of a small amount of noise prevents inverse filtering from working properly. Adding gaussian noise will change the Fourier domain representaion of the image sufficiently that the inverse operation is unable to recover the original image.
+
+\subsubsection{Can you draw any conclusions about inverse filtering when applied to noise degraded images?}
+
+Inverse filtering applied to noise degraded images is unable to recover the original image, as even small amounts of noise alter the Fourier domain representation of the image sufficiently so that the original image cannot be recovered.
+
+
+\subsection{Using the Weiner filter for recovering noisy images}
+
+The Weiner filter is able to compensate for the noise present in a degraded image, and reduces the strength of the inverse filter across the image to prevent overaccomadating noise.
+
 \begin{figure}[ht]
 \centering
 	\subfigure[NSR=0.001; PSNR +5.11dB]{
@@ -428,6 +438,16 @@ Gaussian noise has been added to the image after it has been blurred. Applying t
 	\caption{Weiner filtering with various NSR. As NSR $\rightarrow$0, Weiner filtering becomes normal inverse filtering.}
 \end{figure}
 
+
+\subsubsection{Compare the restored image with the restored image from the previous step. How does the restored image and the PSNR differ from the previous restored image? Is it better or worse? Why? Explain it in context with the concept behind Wiener filtering.}
+
+The restored image using the Weiner filter is much closer to the original (using NSR=0.1 as the best one) than the straight inverse filtering. Wiener filtering attenuates various frequencies when applying an inverse filter. As the noise in the image is relatively flat across all frequencies, the noise to signal ratio is approximated by a constant.
+
+The Wiener filtering can be explained as blending the distorted image with noise with the inverse of the distorted image with noise. By reducing the inverse component, the issue of noise in deconvolution can be reduced.
+
+\subsubsection{Can you draw any conclusions about Wiener filtering when applied to noise degraded images?}
+
+Wiener filtering is able to accomadate noise when attempting to solve the noise problem inherrent in deconvolution. The NSR, if unknown, must be carefully chosen in order to to get a good result.
 
 \appendix
 \newpage
