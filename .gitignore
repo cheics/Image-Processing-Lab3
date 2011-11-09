@@ -1,4 +1,8 @@
 # ignore all genrated files
 report.*
+
+#ignore matlab compiled files
+matlabFiles/*.asv
+
 # except hand maintained report.tex
 !report.tex

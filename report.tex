@@ -74,6 +74,122 @@ In the gaussian histogram, image intensities are grouped in gaussian distributio
 \newpage
 
 
+\section{Noise Reduction in the Spatial Domain}
+
+\clearpage
+\subsection{Section0}
+\begin{figure}[ht]
+\centering
+	\subfigure[Original image]{
+	\includegraphics[width=0.45\linewidth]{question3/0_lenaBase}
+	}
+	\subfigure[Histogram]{
+	\includegraphics[width=0.45\linewidth]{question3/0_lenaBase_hist}
+	}
+	\subfigure[Image with gaussian noise $\mu$=0, $\sigma$=0.002; PSNR +26.99dB]{
+	\includegraphics[width=0.45\linewidth]{question3/0_lenaNoisyGauss}
+	}
+	\subfigure[Histogram]{
+	\includegraphics[width=0.45\linewidth]{question3/0_lenaNoisyGauss_hist}
+	}
+	\caption{Images with gaussian noise}
+	\label{fig:gaussianNoise}
+\end{figure}
+
+
+\clearpage
+\subsection{Section1}
+\begin{figure}[ht]
+\centering
+	\subfigure[Denoised image with 3x3 average kernel; PSNR +18.42dB]{
+	\includegraphics[width=0.45\linewidth]{question3/1_lenaDeNoisyGauss3x3avg}
+	}
+	\subfigure[Histogram]{
+	\includegraphics[width=0.45\linewidth]{question3/1_lenaDeNoisyGauss3x3avg_hist}
+	}
+	
+	\caption{Images with gaussian noise}
+	\label{fig:gaussianNoise}
+\end{figure}
+
+\clearpage
+\subsection{Section2}
+\begin{figure}[ht]
+\centering
+	\subfigure[Denoised image with 7x7 average kernel; PSNR +25.52dB]{
+	\includegraphics[width=0.45\linewidth]{question3/2_lenaDeNoisyGauss7x7avg}
+	}
+	\subfigure[Histogram]{
+	\includegraphics[width=0.45\linewidth]{question3/2_lenaDeNoisyGauss7x7avg_hist}
+	}
+	
+	\caption{Images with gaussian noise}
+	\label{fig:gaussianNoise}
+\end{figure}
+
+\clearpage
+\subsection{Section3}
+\begin{figure}[ht]
+\centering
+	\subfigure[Denoised image with 7x7 gaussian kernel; PSNR +27.08dB]{
+	\includegraphics[width=0.45\linewidth]{question3/3_lenaDeNoisyGauss7x7avgGauss}
+	}
+	\subfigure[Histogram]{
+	\includegraphics[width=0.45\linewidth]{question3/3_lenaDeNoisyGauss7x7avgGauss_hist}
+	}
+	
+	\caption{Images with gaussian noise}
+	\label{fig:gaussianNoise}
+\end{figure}
+
+
+\clearpage
+\subsection{Section4}
+
+\begin{figure}[ht]
+\centering
+	\subfigure[S\&P noise on original image; PSNR +18.41dB]{
+	\includegraphics[width=0.45\linewidth]{question3/4_lenaNoisySp}
+	}
+	\subfigure[Histogram]{
+	\includegraphics[width=0.45\linewidth]{question3/4_lenaNoisySp_hist}
+	}
+\end{figure}
+
+\begin{figure}[ht]
+\centering	
+	\subfigure[S\&P denoised with 7x7 average kernel; PSNR +25.52dB]{
+	\includegraphics[width=0.45\linewidth]{question3/4_lenaDeNoisySp_7x7Avg}
+	}
+	\subfigure[Histogram]{
+	\includegraphics[width=0.45\linewidth]{question3/4_lenaDeNoisySp_7x7Avg_hist}
+	}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+	\subfigure[S\&P denoised with 7x7 gaussian kernel; PSNR +27.08dB]{
+	\includegraphics[width=0.45\linewidth]{question3/4_lenaDeNoisySp_7x7AvgGauss}
+	}
+	\subfigure[Histogram]{
+	\includegraphics[width=0.45\linewidth]{question3/4_lenaDeNoisySp_7x7AvgGauss_hist}
+	}
+\end{figure}
+
+
+\clearpage
+\subsection{Section5}
+
+\begin{figure}[ht]
+\centering
+	\subfigure[S\&P denoised with median filter; PSNR +34.47]{
+	\includegraphics[width=0.45\linewidth]{question3/5_lenaDeNoisyMedian}
+	}
+	\subfigure[Histogram]{
+	\includegraphics[width=0.45\linewidth]{question3/5_lenaDeNoisyMedian_hist}
+	}
+\end{figure}
+
 % -------- Bibliography --------
 %\addcontentsline{toc}{chapter}{\hspace{13pt} References}
 \bibliography{refs}
