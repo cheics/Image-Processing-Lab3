@@ -7,8 +7,8 @@
 % --------- Title Info -----------
 \titlestyle{design} % used in SydeTitle.tex. Can equal one of the following values: design, work
 
-\title{Lab 1}
-\subtitle{Fundamentals of Image Processing}
+\title{Lab 2}
+\subtitle{Image Enhancement and Restoration}
 
 \coursecode{SYDE 475}
 \department{Systems Design Engineering}
@@ -351,7 +351,60 @@ filtering methods?}
 	\caption{Image filtered using gaussian low-pass filter, $\sigma^2$=60; PSNR +29.53dB}
 \end{figure}
 
+\section{Image reconstruction in the frequency domain}
 
+\subsection{Section1}
+\begin{figure}[ht]
+\centering
+	\subfigure[Base image]{
+	\includegraphics[width=0.30\textwidth]{question6/1_camBase}
+	}
+	\subfigure[Blurred image; PSNR +16.90]{
+	\includegraphics[width=0.30\textwidth]{question6/1_cam_blur}
+	}
+	\subfigure[Image reconstructed using blur inverse; PSNR +251.54dB]{
+	\includegraphics[width=0.30\textwidth]{question6/1_cam_unblur}
+	}
+\end{figure}
+
+\subsection{Section2}
+\begin{figure}[ht]
+\centering
+	\subfigure[Blurred image; PSNR +16.90]{
+	\includegraphics[width=0.30\textwidth]{question6/1_cam_blur}
+	}
+	\subfigure[Gaussian noise, $\sigma^2$=0.002; PSNR +16.50]{
+	\includegraphics[width=0.30\textwidth]{question6/2_cam_blur_noisy}
+	}
+	\subfigure[Image reconstructed using blur inverse; PSNR -35.24dB]{
+	\includegraphics[width=0.30\textwidth]{question6/2_cam_unblur_noisy}
+	}
+\end{figure}
+
+\subsection{Section3}
+\begin{figure}[ht]
+\centering
+	\subfigure[NSR=0.001; PSNR +5.11dB]{
+	\includegraphics[width=0.30\textwidth]{question6/3_cam_wnr0_001}
+	}
+	\subfigure[NSR=0.01; PSNR +13.89dB]{
+	\includegraphics[width=0.30\textwidth]{question6/3_cam_wnr0_01}
+	}
+	\subfigure[NSR=0.05; PSNR +16.00dB]{
+	\includegraphics[width=0.30\textwidth]{question6/3_cam_wnr0_05}
+	}
+	
+	\subfigure[NSR=0.1; PSNR +16.16dB]{
+	\includegraphics[width=0.30\textwidth]{question6/3_cam_wnr0_10}
+	}
+	\subfigure[NSR=0.2; PSNR +15.66dB]{
+	\includegraphics[width=0.30\textwidth]{question6/3_cam_wnr0_20}
+	}
+	\subfigure[NSR=0.4; PSNR +14.05dB]{
+	\includegraphics[width=0.30\textwidth]{question6/3_cam_wnr0_40}
+	}
+	\caption{Weiner filtering with various NSR. As NSR $\rightarrow$0, Weiner filtering becomes normal inverse filtering.}
+\end{figure}
 
 
 \appendix
