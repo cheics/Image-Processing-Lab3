@@ -260,10 +260,14 @@ The Gaussian kernal results in a less blurry image than the averaging kernal.
 
 \subsubsection{How does the averaging filter and Gaussian filtering methods perform on the noisy image in terms of
 noise reduction? Explain in terms of visual quality as well as PSNR. Why do we get such results?}
+They all result in blurrier images which have a higher PSNR. This happens because
+
 
 
 \subsubsection{Compare the histograms of the denoised images with that of the noisy image. What characteristics
 are present in all of the histograms? Why?}
+All the histograms of denoised images have more, sharpened peaks. This is because
+
 
 
 \subsubsection{How does the denoised image produced using the median filter compare with the denoised images
@@ -314,7 +318,25 @@ The median filter produces a superior quality image compared to the gaussian and
 	}
 \end{figure}
 
+\subsection{Discussion questions}
 
+\subsubsection{What does the subtracted image look like? What frequency components from the original image are
+preserved in the subtracted image? Why?}
+The subtracted image looks like an outline of the original image (i.e. edges are preserved). This is because high frequency components are preserved in the subtraction image. This occurs because the Gaussian filtered image eliminates high frequency components, and thus high frequency is all that is left when it is subtracted from the original image.
+
+\subsubsection{What does the resulting image look like? How does it differ from the original image? Explain why it
+appears this way}
+The high boosted image has sharper edges than the original. This is because the prominence of the high frequency components is being increased by adding another set of them (i.e. the subtracted image).
+
+\subsubsection{Compare the results produced by adding the subtracted image to the original image and that produced
+by adding half of the subtracted image to the original image. How does it differ? Explain why it
+appears this way}
+The edges are less prominent in the image with half the subtracted image added. This is because the high frequency components are accentuated less. However, high frequency noise is also less prominant than the half image.
+
+\subsubsection{What does multiplying the subtracted image by a factor less than one accomplish? What about greater
+than one}
+
+By multiplying it by a factor less than one, edges are not as sharp, but high frequency noise is also less magnified. With a value greater than one, the reverse it true.
 
 
 \section{Noise reduction in the frequency domain}
