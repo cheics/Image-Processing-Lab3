@@ -230,10 +230,11 @@ While overall noise is reduced and the PSNR is higher, the image is of reduced v
 \subsubsection{Compare the visual difference between the denoised image from the 7x7 filtering kernel and the
 denoised image from the 3x3 filtering kernel. Are there any differences? Why? Did the PSNR
 decrease? Why}
-The 7x7 filtered image is even blurrier than the 3x3 filtered one. This is because it averages over a wider area. The PSNR also decreased, with the PSNR now slightly less than that of the original noiseless image. This is because by taking a wider averaging window, 
+The 7x7 filtered image is even blurrier than the 3x3 filtered one. This is because it averages over a wider area. The PSNR also decreased, with the PSNR now slightly less than that of the noisy image. This is because by taking a wider averaging window, high frequency elements such as edges are further surpressed.
 
 
 \subsubsection{Compare the histograms of the two denoised images. What are the differences? Why}
+The histogram of the 7x7 has sharper peaks than the 3x3, more closely mirroring that of the original noiseless image.
 
 
 \subsubsection{Based on visual quality of the denoised image, what are the benefits and drawbacks associated with
@@ -253,7 +254,7 @@ images from the averaging ?lter kernels. What are the differences? Why?}
 using a Gaussian kernel as opposed to an averaging kernel?}
 
 
-\subsubsection{How does the averaging filter and Gaussian ?ltering methods perform on the noisy image in terms of
+\subsubsection{How does the averaging filter and Gaussian filtering methods perform on the noisy image in terms of
 noise reduction? Explain in terms of visual quality as well as PSNR. Why do we get such results?}
 
 
