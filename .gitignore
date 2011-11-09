@@ -1,6 +1,9 @@
 # ignore all genrated files
 report.*
 
+#ignore all aux
+*.aux
+
 #ignore matlab compiled files
 matlabFiles/*.asv
 
