@@ -353,9 +353,17 @@ filtering methods?}
 	\caption{Image filtered using gaussian low-pass filter, $\sigma^2$=60; PSNR +29.53dB}
 \end{figure}
 
+\clearpage
 \section{Image reconstruction in the frequency domain}
 
-\subsection{Section1}
+In the following section, reconstructing an image based on the inverse of the degradation will be examined.
+
+\subsection{Restoring an image with }
+
+\subsubsection{Compare the restored image with the original image and the blurred image. How does the restored image and the PSNR differ from the blurred image? Is it better or worse? Why?}
+The blurred image is simply a blurred version of the original image, created using a averaging filter. The restored image appears identical to the original image. The PSNR of +251.54dB corresponds to a MSE in the image of $\leq 3\times{10}^{-11}$; which is likely due to the limited precision of MATLAB. As the blur operation is a linear-position-invarient filter, it is easily reversible and the image we restore is basically identical to the original.
+
+
 \begin{figure}[ht]
 \centering
 	\subfigure[Base image]{
@@ -367,9 +375,17 @@ filtering methods?}
 	\subfigure[Image reconstructed using blur inverse; PSNR +251.54dB]{
 	\includegraphics[width=0.30\textwidth]{question6/1_cam_unblur}
 	}
+	\caption{The base cameraman image has been degraded using a disk blur filter with a radius of 4.}
 \end{figure}
 
-\subsection{Section2}
+\clearpage
+\subsection{Noise and image restoration using the inverse}
+Gaussian noise has been added to the image after it has been blurred. Applying the inverse blur operation may not be able to restore the image to it's original state.
+
+\subsubsection{}
+
+
+
 \begin{figure}[ht]
 \centering
 	\subfigure[Blurred image; PSNR +16.90]{
