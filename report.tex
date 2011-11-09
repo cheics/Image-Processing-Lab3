@@ -77,10 +77,10 @@ When evaluating image processing algorithms, it is important to see how they per
 
 \subsubsection{ Describe each of the histograms in the context of the corresponding noise models. Why do they appear
 that way?}
-In the gaussian histogram, image intensities are grouped in gaussian distributions centered around the two intesity values of the original image. It appears the way it is because as additive noise, all that is being done is the gaussian distribution is added to the image. Speckled noise, which is multiplicative, appears to be a flat distribution centered around the original intensities. There is more variance around the higher original intesity value, which is due to the multiplicative nature of speckle noise.
+In the Gaussian histogram, image intensities are grouped in Gaussian distributions centred around the two intensity values of the original image. It appears the way it is because as additive noise, all that is being done is the Gaussian distribution is added to the image. Speckled noise, which is multiplicative, appears to be a flat distribution centred around the original intensities. There is more variance around the higher original intensity value, which is due to the multiplicative nature of speckle noise.
 
 \subsubsection{Are there visual differences between the noise contaminated images? What are they? Why}
-There are some visual differences. The gaussian has a lot more extra bright or extra dark pixels, while speckled has more that are more off by a smaller intensity. This is because the gaussian is additive noise, and the speckled is multiplicative.
+There are some visual differences. The Gaussian has a lot more extra bright or extra dark pixels, while speckled has more that are more off by a smaller intensity. This is because the Gaussian is additive noise, and the speckled is multiplicative.
 
 \subsubsection{In the speckle noise case, what is the underlying distribution used? Can you tell from the histogram?
 How?}
@@ -105,13 +105,13 @@ Since the noise is multiplicative, it is proportional to the local grey level in
 	\subfigure[Histogram]{
 	\includegraphics[width=0.45\linewidth]{question3/0_lenaBase_hist}
 	}
-	\subfigure[Image with gaussian noise $\mu$=0, $\sigma^2$=0.002; PSNR +26.99dB]{
+	\subfigure[Image with Gaussian noise $\mu$=0, $\sigma^2$=0.002; PSNR +26.99dB]{
 	\includegraphics[width=0.45\linewidth]{question3/0_lenaNoisyGauss}
 	}
 	\subfigure[Histogram]{
 	\includegraphics[width=0.45\linewidth]{question3/0_lenaNoisyGauss_hist}
 	}
-	\caption{Images with gaussian noise}
+	\caption{Images with Gaussian noise}
 	\label{fig:gaussianNoise}
 \end{figure}
 
@@ -127,7 +127,7 @@ Since the noise is multiplicative, it is proportional to the local grey level in
 	\includegraphics[width=0.45\linewidth]{question3/1_lenaDeNoisyGauss3x3avg_hist}
 	}
 	
-	\caption{Images with gaussian noise}
+	\caption{Images with Gaussian noise}
 	\label{fig:gaussianNoise}
 \end{figure}
 
@@ -142,7 +142,7 @@ Since the noise is multiplicative, it is proportional to the local grey level in
 	\includegraphics[width=0.45\linewidth]{question3/2_lenaDeNoisyGauss7x7avg_hist}
 	}
 	
-	\caption{Images with gaussian noise}
+	\caption{Images with Gaussian noise}
 	\label{fig:gaussianNoise}
 \end{figure}
 
@@ -150,14 +150,14 @@ Since the noise is multiplicative, it is proportional to the local grey level in
 \subsection{Section3}
 \begin{figure}[ht]
 \centering
-	\subfigure[Denoised image with 7x7 gaussian kernel; PSNR +30.82dB]{
+	\subfigure[Denoised image with 7x7 Gaussian kernel; PSNR +30.82dB]{
 	\includegraphics[width=0.45\linewidth]{question3/3_lenaDeNoisyGauss7x7avgGauss}
 	}
 	\subfigure[Histogram]{
 	\includegraphics[width=0.45\linewidth]{question3/3_lenaDeNoisyGauss7x7avgGauss_hist}
 	}
 	
-	\caption{Images with gaussian noise}
+	\caption{Images with Gaussian noise}
 	\label{fig:gaussianNoise}
 \end{figure}
 
@@ -187,7 +187,7 @@ Since the noise is multiplicative, it is proportional to the local grey level in
 
 \begin{figure}[ht]
 \centering
-	\subfigure[S\&P denoised with 7x7 gaussian kernel; PSNR +27.08dB]{
+	\subfigure[S\&P denoised with 7x7 Gaussian kernel; PSNR +27.08dB]{
 	\includegraphics[width=0.45\linewidth]{question3/4_lenaDeNoisySp_7x7AvgGauss}
 	}
 	\subfigure[Histogram]{
@@ -216,10 +216,10 @@ Since the noise is multiplicative, it is proportional to the local grey level in
 
 \subsubsection{Compare the visual difference between the noisy image and the denoised image. How well did it
 work? Why? Did the PSNR decrease?}
-The denoised image appears blurrier. The denoising worked rather well, as the PSNR is higher in the denoised image. This is because gaussian is additive noise, and averaging works well at removing additive noise.
+The denoised image appears blurrier. The denoising worked rather well, as the PSNR is higher in the denoised image. This is because Gaussian is additive noise, and averaging works well at removing additive noise.
 
 \subsubsection{Compare the histograms of the noise-free, noisy, and denoised images. What happened? Why}
-The noisy histogram is missing the sharp peaks of the noise free image, instead smoothing it closer to an overall gaussian distributed shape (due to the additive noise). The averaging filter partially restores this histogram pattern.
+The noisy histogram is missing the sharp peaks of the noise free image, instead smoothing it closer to an overall Gaussian distributed shape (due to the additive noise). The averaging filter partially restores this histogram pattern.
 
 
 \subsubsection{Based on visual quality of the denoised image, what are the benefits and drawbacks associated with
@@ -230,7 +230,7 @@ While overall noise is reduced and the PSNR is higher, the image is of reduced v
 \subsubsection{Compare the visual difference between the denoised image from the 7x7 filtering kernel and the
 denoised image from the 3x3 filtering kernel. Are there any differences? Why? Did the PSNR
 decrease? Why}
-The 7x7 filtered image is even blurrier than the 3x3 filtered one. This is because it averages over a wider area. The PSNR also decreased, with the PSNR now slightly less than that of the noisy image. This is because by taking a wider averaging window, high frequency elements such as edges are further surpressed.
+The 7x7 filtered image is even blurrier than the 3x3 filtered one. This is because it averages over a wider area. The PSNR also decreased, with the PSNR now slightly less than that of the noisy image. This is because by taking a wider averaging window, high frequency elements such as edges are further suppressed.
 
 
 \subsubsection{Compare the histograms of the two denoised images. What are the differences? Why}
@@ -245,12 +245,12 @@ While the noise is basically gone from the image, it is extremely blurry; many f
 \subsubsection{Compare the visual difference between the denoised image from the Gaussian filtering kernel and the
 denoised images from the averaging filter kernels. Are there any differences? Why? Did the PSNR
 decrease? Why}
-The gaussian filtered image is less blurry than the two averaging filtered images. Finer details are better preserved. This is because with the gaussian kernal, pixels further away from the center are weighted less, unlike the uniform averaging of the averaging kernal.
+The Gaussian filtered image is less blurry than the two averaging filtered images. Finer details are better preserved. This is because with the Gaussian kernel, pixels further away from the centre are weighted less, unlike the uniform averaging of the averaging kernel.
 
 
 \subsubsection{Compare the histograms of the denoised image using the Gaussian filtering kernel and the denoised
 images from the averaging filter kernels. What are the differences? Why?}
-The sharp peaks of seen in the 7x7 averaging filter are less pronounced in the gaussian filter. 
+The sharp peaks of seen in the 7x7 averaging filter are less pronounced in the Gaussian filter. 
 
 
 \subsubsection{Based on visual quality of the denoised image, what are the benefits and drawbacks associated with
@@ -288,7 +288,7 @@ filtering methods?}
 \subsection{Section2}
 \begin{figure}[ht]
 \centering
-	\subfigure[Highboosted image, A=1.0]{
+	\subfigure[High-boosted image, A=1.0]{
 	\includegraphics[width=0.45\linewidth]{question4/2_cam_highBoost_10}
 	}
 \end{figure}
@@ -297,17 +297,17 @@ filtering methods?}
 \subsection{Section3}
 \begin{figure}[ht]
 \centering
-	\subfigure[Highboosted image, A=0.5]{
+	\subfigure[High-boosted image, A=0.5]{
 	\includegraphics[width=0.45\linewidth]{question4/3_cam_highBoost_05}
 	}
 \end{figure}
 
 \begin{figure}[ht]
 \centering
-	\subfigure[Highboosted image, A=1.5]{
+	\subfigure[High-boosted image, A=1.5]{
 	\includegraphics[width=0.45\linewidth]{question4/3_cam_highBoost_15}
 	}
-	\subfigure[Highboosted image, A=4.0]{
+	\subfigure[High-boosted image, A=4.0]{
 	\includegraphics[width=0.45\linewidth]{question4/3_cam_highBoost_40}
 	}
 \end{figure}
@@ -352,7 +352,7 @@ filtering methods?}
 \begin{figure}[ht]
 \centering
 	\includegraphics[width=0.45\textwidth]{question5/4_lena_LFP_gauss60}
-	\caption{Image filtered using gaussian low-pass filter, $\sigma^2$=60; PSNR +29.53dB}
+	\caption{Image filtered using Gaussian low-pass filter, $\sigma^2$=60; PSNR +29.53dB}
 \end{figure}
 
 \clearpage
@@ -363,7 +363,7 @@ In the following section, reconstructing an image based on the inverse of the de
 \subsection{Restoring an image with }
 
 \subsubsection{Compare the restored image with the original image and the blurred image. How does the restored image and the PSNR differ from the blurred image? Is it better or worse? Why?}
-The blurred image is simply a blurred version of the original image, created using a averaging filter. The restored image appears identical to the original image. The PSNR of +251.54dB corresponds to a MSE in the image of $\leq 3\times{10}^{-11}$; which is likely due to the limited precision of MATLAB. As the blur operation is a linear-position-invarient filter, it is easily reversible and the image we restore is basically identical to the original.
+The blurred image is simply a blurred version of the original image, created using a averaging filter. The restored image appears identical to the original image. The PSNR of +251.54dB corresponds to a MSE in the image of $\leq 3\times{10}^{-11}$; which is likely due to the limited precision of MATLAB. As the blur operation is a linear-position-invariant filter, it is easily reversible and the image we restore is basically identical to the original.
 
 
 \begin{figure}[ht]
@@ -401,16 +401,16 @@ Gaussian noise has been added to the image after it has been blurred. Applying t
 \subsubsection{Compare the restored image with the restored image from the previous step. How does the restored
 image and the PSNR differ from the previous restored image? Is it better or worse? Why?}
 
-This restored image looks nothing like the original image. While the blurred images with and without noise appear very similar and have very similar PSNR values; the addition of a small amount of noise prevents inverse filtering from working properly. Adding gaussian noise will change the Fourier domain representaion of the image sufficiently that the inverse operation is unable to recover the original image.
+This restored image looks nothing like the original image. While the blurred images with and without noise appear very similar and have very similar PSNR values; the addition of a small amount of noise prevents inverse filtering from working properly. Adding Gaussian noise will change the Fourier domain representation of the image sufficiently that the inverse operation is unable to recover the original image.
 
 \subsubsection{Can you draw any conclusions about inverse filtering when applied to noise degraded images?}
 
 Inverse filtering applied to noise degraded images is unable to recover the original image, as even small amounts of noise alter the Fourier domain representation of the image sufficiently so that the original image cannot be recovered.
 
 
-\subsection{Using the Weiner filter for recovering noisy images}
+\subsection{Using the Wiener filter for recovering noisy images}
 
-The Weiner filter is able to compensate for the noise present in a degraded image, and reduces the strength of the inverse filter across the image to prevent overaccomadating noise.
+The Wiener filter is able to compensate for the noise present in a degraded image, and reduces the strength of the inverse filter across the image to prevent over-accommodating noise.
 
 \begin{figure}[ht]
 \centering
@@ -433,19 +433,19 @@ The Weiner filter is able to compensate for the noise present in a degraded imag
 	\subfigure[NSR=0.4; PSNR +14.05dB]{
 	\includegraphics[width=0.30\textwidth]{question6/3_cam_wnr0_40}
 	}
-	\caption{Weiner filtering with various NSR. As NSR $\rightarrow$0, Weiner filtering becomes normal inverse filtering.}
+	\caption{Wiener filtering with various NSR. As NSR $\rightarrow$0, Wiener filtering becomes normal inverse filtering.}
 \end{figure}
 
 
 \subsubsection{Compare the restored image with the restored image from the previous step. How does the restored image and the PSNR differ from the previous restored image? Is it better or worse? Why? Explain it in context with the concept behind Wiener filtering.}
 
-The restored image using the Weiner filter is much closer to the original (using NSR=0.1 as the best one) than the straight inverse filtering. Wiener filtering attenuates various frequencies when applying an inverse filter. As the noise in the image is relatively flat across all frequencies, the noise to signal ratio is approximated by a constant.
+The restored image using the Wiener filter is much closer to the original (using NSR=0.1 as the best one) than the straight inverse filtering. Wiener filtering attenuates various frequencies when applying an inverse filter. As the noise in the image is relatively flat across all frequencies, the noise to signal ratio is approximated by a constant.
 
 The Wiener filtering can be explained as blending the distorted image with noise with the inverse of the distorted image with noise. By reducing the inverse component, the issue of noise in deconvolution can be reduced.
 
 \subsubsection{Can you draw any conclusions about Wiener filtering when applied to noise degraded images?}
 
-Wiener filtering is able to accomadate noise when attempting to solve the noise problem inherrent in deconvolution. The NSR, if unknown, must be carefully chosen in order to to get a good result.
+Wiener filtering is able to accommodate noise when attempting to solve the noise problem inherent in deconvolution. The NSR, if unknown, must be carefully chosen in order to to get a good result.
 
 \appendix
 \newpage
