@@ -366,7 +366,7 @@ The median filter produces a superior quality image compared to the gaussian and
 
 In the following section, reconstructing an image based on the inverse of the degradation will be examined.
 
-\subsection{Restoring an image with }
+\subsection{Restoring an image using the inverse of a degradation}
 
 \subsubsection{Compare the restored image with the original image and the blurred image. How does the restored image and the PSNR differ from the blurred image? Is it better or worse? Why?}
 The blurred image is simply a blurred version of the original image, created using a averaging filter. The restored image appears identical to the original image. The PSNR of +251.54dB corresponds to a MSE in the image of $\leq 3\times{10}^{-11}$; which is likely due to the limited precision of MATLAB. As the blur operation is a linear-position-invariant filter, it is easily reversible and the image we restore is basically identical to the original.
@@ -455,6 +455,27 @@ Wiener filtering is able to accommodate noise when attempting to solve the noise
 
 \appendix
 \newpage
+
+\section{Matlab Code}
+
+
+\subsection{PSNR function}
+\lstinputlisting[language=Matlab]{"matlabFiles/psnr.m"}
+
+\subsection{Normalize image function}
+\lstinputlisting[language=Matlab]{"matlabFiles/normalizeImage.m"}
+
+\subsection{Noise reduction in the spatial domain (3)}
+\lstinputlisting[language=Matlab]{"matlabFiles/lab2_q3.m"}
+
+\subsection{Sharpening in the spatial domain (4)}
+\lstinputlisting[language=Matlab]{"matlabFiles/lab2_q4.m"}
+
+\subsection{Noise reduction in the frequency domain (5)}
+\lstinputlisting[language=Matlab]{"matlabFiles/lab2_q5.m"}
+
+\subsection{Image restoration in the frequency domain (6)}
+\lstinputlisting[language=Matlab]{"matlabFiles/lab2_q6.m"}
 
 % -------- Bibliography --------
 %\addcontentsline{toc}{chapter}{\hspace{13pt} References}
