@@ -234,7 +234,7 @@ The 7x7 filtered image is even blurrier than the 3x3 filtered one. This is becau
 
 
 \subsubsection{Compare the histograms of the two denoised images. What are the differences? Why}
-The histogram of the 7x7 has sharper peaks than the 3x3, more closely mirroring that of the original noiseless image.
+The histogram of the 7x7 has sharper peaks than the 3x3, more closely mirroring that of the original noiseless image. This is because
 
 
 \subsubsection{Based on visual quality of the denoised image, what are the benefits and drawbacks associated with
@@ -245,10 +245,12 @@ While the noise is basically gone from the image, it is extremely blurry; many f
 \subsubsection{Compare the visual difference between the denoised image from the Gaussian filtering kernel and the
 denoised images from the averaging filter kernels. Are there any differences? Why? Did the PSNR
 decrease? Why}
+The gaussian filtered image is less blurry than the two averaging filtered images. Finer details are better preserved. This is because with the gaussian kernal, pixels further away from the center are weighted less, unlike the uniform averaging of the averaging kernal.
 
 
 \subsubsection{Compare the histograms of the denoised image using the Gaussian filtering kernel and the denoised
 images from the averaging filter kernels. What are the differences? Why?}
+The sharp peaks of seen in the 7x7 averaging filter are less pronounced in the gaussian filter. 
 
 
 \subsubsection{Based on visual quality of the denoised image, what are the benefits and drawbacks associated with
