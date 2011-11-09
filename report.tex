@@ -50,19 +50,19 @@ When evaluating image processing algorithms, it is important to see how they per
 
 \begin{figure}[ht]
 \centering
-	\subfigure[Image with Gaussian Noise]{
+	\subfigure[Image with Gaussian Noise; $\sigma^2$=0.01]{
 	\includegraphics[width=0.45\linewidth]{question2/gauss}
 	}
 	\subfigure[Histogram of Gaussian Noise Image]{
 	\includegraphics[width=0.45\linewidth]{question2/gauss_hist}
 	}
-	\subfigure[Image with Speckle Noise]{
+	\subfigure[Image with Speckle Noise; $\sigma^2$=0.04]{
 	\includegraphics[width=0.45\linewidth]{question2/speckle}
 	}
 	\subfigure[Histogram of Speckle Noise Image]{
 	\includegraphics[width=0.45\linewidth]{question2/speckle_hist}
 	}
-	\subfigure[Image with Salt and Pepper]{
+	\subfigure[Image with Salt and Pepper Noise; $\rho$=0.05]{
 	\includegraphics[width=0.45\linewidth]{question2/salt}
 	}
 	\subfigure[Histogram of Salt and Pepper Image]{
@@ -105,7 +105,7 @@ Since the noise is multiplicative, it is proportional to the local grey level in
 	\subfigure[Histogram]{
 	\includegraphics[width=0.45\linewidth]{question3/0_lenaBase_hist}
 	}
-	\subfigure[Image with gaussian noise $\mu$=0, $\sigma$=0.002; PSNR +26.99dB]{
+	\subfigure[Image with gaussian noise $\mu$=0, $\sigma^2$=0.002; PSNR +26.99dB]{
 	\includegraphics[width=0.45\linewidth]{question3/0_lenaNoisyGauss}
 	}
 	\subfigure[Histogram]{
@@ -306,6 +306,53 @@ filtering methods?}
 	\includegraphics[width=0.45\linewidth]{question4/3_cam_highBoost_40}
 	}
 \end{figure}
+
+
+
+
+\section{Noise reduction in the frequency domain}
+
+\subsection{Section1}
+\begin{figure}[ht]
+\centering
+	\subfigure[Base Lena image]{
+	\includegraphics[width=0.45\textwidth]{question5/1_lenaBase}
+	}
+	\subfigure[Log Fourier Spectrum]{
+	\includegraphics[width=0.45\textwidth]{question5/1_lenaBase_fft}
+	}
+	\subfigure[Lena image with Gaussian noise, $\sigma^2$=0.005; PSNR +23.02dB]{
+	\includegraphics[width=0.45\textwidth]{question5/1_lenaNoisy}
+	}
+	\subfigure[Log Fourier Spectrum]{
+	\includegraphics[width=0.45\textwidth]{question5/1_lenaNoisy_fft}
+	}
+\end{figure}
+
+\subsection{Section2}
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.45\textwidth]{question5/2_lena_LFP_60}
+	\caption{Image filtered using low-pass with a cutoff of 60; PSNR +27.90dB}
+\end{figure}
+
+\subsection{Section3}
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.45\textwidth]{question5/3_lena_LFP_20}
+	\caption{Image filtered using low-pass with a cutoff of 20; PSNR +23.11dB}
+\end{figure}
+
+\subsection{Section4}
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.45\textwidth]{question5/4_lena_LFP_gauss60}
+	\caption{Image filtered using gaussian low-pass filter, $\sigma^2$=60; PSNR +29.53dB}
+\end{figure}
+
+
+
+
 
 \appendix
 \newpage
