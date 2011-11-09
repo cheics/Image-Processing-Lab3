@@ -250,11 +250,16 @@ The Gaussian filtered image is less blurry than the two averaging filtered image
 
 \subsubsection{Compare the histograms of the denoised image using the Gaussian filtering kernel and the denoised
 images from the averaging filter kernels. What are the differences? Why?}
+<<<<<<< HEAD
 The sharp peaks of seen in the 7x7 averaging filter are less pronounced in the Gaussian filter. 
+=======
+The sharp peaks of seen in the 7x7 averaging filter are less pronounced in the gaussian filter. This is because 
+>>>>>>> 5ac6e4450c0815d9bdd673d1c5660bbfedde6aae
 
 
 \subsubsection{Based on visual quality of the denoised image, what are the benefits and drawbacks associated with
 using a Gaussian kernel as opposed to an averaging kernel?}
+The Gaussian kernal results in a less blurry image than the averaging kernal.
 
 
 \subsubsection{How does the averaging filter and Gaussian filtering methods perform on the noisy image in terms of
@@ -269,6 +274,7 @@ are present in all of the histograms? Why?}
 produced using averaging filter and Gaussian filtering methods? Explain in terms of visual quality
 as well as PSNR. Why do we get such results with median filter when compared to the other spatial
 filtering methods?}
+The median filter produces a superior quality image compared to the gaussian and averaging filters. The PSNR is also significantly higher. We get such results with the median filter because by taking the median value, excessive high/low intensities due to noise do not get taken into account. With the averaging/gaussian filters, these get averaged into the denoised image.
 
 
 
