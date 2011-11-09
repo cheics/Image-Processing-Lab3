@@ -216,39 +216,45 @@ Since the noise is multiplicative, it is proportional to the local grey level in
 
 \subsubsection{Compare the visual difference between the noisy image and the denoised image. How well did it
 work? Why? Did the PSNR decrease?}
-The denoised image appears blurrier. The denoising did not work that well, as the PSNR is actually lower in the denoised image.
+The denoised image appears blurrier. The denoising worked rather well, as the PSNR is higher in the denoised image. This is because gaussian is additive noise, and averaging works well at removing additive noise.
 
 \subsubsection{Compare the histograms of the noise-free, noisy, and denoised images. What happened? Why}
+The noisy histogram is missing the sharp peaks of the noise free image, instead smoothing it closer to an overall gaussian distributed shape (due to the additive noise). The averaging filter partially restores this histogram pattern.
 
 
-\subsubsection{Based on visual quality of the denoised image, what are the bene?ts and drawbacks associated with
-the average ?lter}
+\subsubsection{Based on visual quality of the denoised image, what are the benefits and drawbacks associated with
+the average filter}
+While overall noise is reduced and the PSNR is higher, the image is of reduced visual quality compared to the original (i.e. blurry).
 
-\subsubsection{Compare the visual difference between the denoised image from the 7x7 ?ltering kernel and the
-denoised image from the 3x3 ?ltering kernel. Are there any differences? Why? Did the PSNR
+
+\subsubsection{Compare the visual difference between the denoised image from the 7x7 filtering kernel and the
+denoised image from the 3x3 filtering kernel. Are there any differences? Why? Did the PSNR
 decrease? Why}
+The 7x7 filtered image is even blurrier than the 3x3 filtered one.
+
+
 
 \subsubsection{Compare the histograms of the two denoised images. What are the differences? Why}
 
 
-\subsubsection{Based on visual quality of the denoised image, what are the bene?ts and drawbacks associated with
+\subsubsection{Based on visual quality of the denoised image, what are the benefits and drawbacks associated with
 using a larger window size?}
 
 
 \subsubsection{Compare the visual difference between the denoised image from the Gaussian ?ltering kernel and the
-denoised images from the averaging ?lter kernels. Are there any differences? Why? Did the PSNR
+denoised images from the averaging filter kernels. Are there any differences? Why? Did the PSNR
 decrease? Why}
 
 
-\subsubsection{Compare the histograms of the denoised image using the Gaussian ?ltering kernel and the denoised
+\subsubsection{Compare the histograms of the denoised image using the Gaussian filtering kernel and the denoised
 images from the averaging ?lter kernels. What are the differences? Why?}
 
 
-\subsubsection{Based on visual quality of the denoised image, what are the bene?ts and drawbacks associated with
+\subsubsection{Based on visual quality of the denoised image, what are the benefits and drawbacks associated with
 using a Gaussian kernel as opposed to an averaging kernel?}
 
 
-\subsubsection{How does the averaging ?lter and Gaussian ?ltering methods perform on the noisy image in terms of
+\subsubsection{How does the averaging filter and Gaussian ?ltering methods perform on the noisy image in terms of
 noise reduction? Explain in terms of visual quality as well as PSNR. Why do we get such results?}
 
 
@@ -256,10 +262,10 @@ noise reduction? Explain in terms of visual quality as well as PSNR. Why do we g
 are present in all of the histograms? Why?}
 
 
-\subsubsection{How does the denoised image produced using the median ?lter compare with the denoised images
-produced using averaging ?lter and Gaussian ?ltering methods? Explain in terms of visual quality
-as well as PSNR. Why do we get such results with median ?lter when compared to the other spatial
-?ltering methods?}
+\subsubsection{How does the denoised image produced using the median filter compare with the denoised images
+produced using averaging filter and Gaussian filtering methods? Explain in terms of visual quality
+as well as PSNR. Why do we get such results with median filter when compared to the other spatial
+filtering methods?}
 
 
 \section{Sharpening in the spatial domain}
