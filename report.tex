@@ -74,10 +74,6 @@ that way?}
 In the gaussian histogram, image intensities are grouped in gaussian distributions centered around the two intesity values of the original image. It appears the way it is because as additive noise, all that is being done is the gaussian distribution is added to the image. Speckled noise, which is multiplicative, appears to be a flat distribution centered around the original intensities. There is more variance around the higher original intesity value, which is due to the multiplicative nature of speckle noise.
 
 
-\appendix
-\newpage
-
-
 \section{Noise Reduction in the Spatial Domain}
 
 \clearpage
@@ -193,6 +189,50 @@ In the gaussian histogram, image intensities are grouped in gaussian distributio
 	\includegraphics[width=0.45\linewidth]{question3/5_lenaDeNoisyMedian_hist}
 	}
 \end{figure}
+
+\clearpage
+\section{Sharpening in the spatial domain}
+
+\subsection{Section1}
+\begin{figure}[ht]
+\centering
+	\subfigure[Base Cameraman image]{
+	\includegraphics[width=0.45\linewidth]{question4/1_camBase}
+	}
+	\subfigure[Original image - Blurred image]{
+	\includegraphics[width=0.45\linewidth]{question4/1_cam_highBoost}
+	}
+\end{figure}
+
+\subsection{Section2}
+\begin{figure}[ht]
+\centering
+	\subfigure[Highboosted image, A=1.0]{
+	\includegraphics[width=0.45\linewidth]{question4/2_cam_highBoost_10}
+	}
+\end{figure}
+
+
+\subsection{Section3}
+\begin{figure}[ht]
+\centering
+	\subfigure[Highboosted image, A=0.5]{
+	\includegraphics[width=0.45\linewidth]{question4/3_cam_highBoost_05}
+	}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+	\subfigure[Highboosted image, A=1.5]{
+	\includegraphics[width=0.45\linewidth]{question4/3_cam_highBoost_15}
+	}
+	\subfigure[Highboosted image, A=4.0]{
+	\includegraphics[width=0.45\linewidth]{question4/3_cam_highBoost_40}
+	}
+\end{figure}
+
+\appendix
+\newpage
 
 % -------- Bibliography --------
 %\addcontentsline{toc}{chapter}{\hspace{13pt} References}
