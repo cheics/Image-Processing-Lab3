@@ -1,0 +1,23 @@
+img = imread('C:\Users\Neil\Desktop\SYDE 575\peppers.png');
+img = rgb2ycbcr(img);
+y = img(:,:,1);
+cb = img(:,:,2);
+cr = img(:,:,3);
+figure(1);
+imshow(y);
+figure(2);
+imshow(cb);
+figure(3);
+imshow(cr);
+cr = imresize(cr,0.5,'bilinear');
+cb = imresize(cb,0.5,'bilinear');
+cr = imresize(cr,2,'bilinear');
+cb = imresize(cb,2,'bilinear');
+img2 = img;
+img2(:,:,2) = cr;
+img2(:,:,2) = cb;
+
+figure(4);
+imshow(img);
+figure(5);
+imshow(img2);
