@@ -47,7 +47,8 @@ img_dct_thresh=blkproc(img_dct, [8 8], 'P1.*x', mask);
 
 img_thresh=floor(blkproc(img_dct_thresh, [8 8], 'P1*x*P2', dct_mtx8', dct_mtx8))+128;
 
-imshow(img_thresh, [0, 255]);
+imwrite(img_thresh/255, strcat(basePath2, 'image_threshold_quant.jpg'));
+psnr(img_thresh, lenaBase, 255); % 5.80
 
 
 
