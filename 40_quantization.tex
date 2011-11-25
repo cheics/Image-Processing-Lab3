@@ -23,11 +23,11 @@
 
 \subsubsection{What happens to the DCT coeffcients when quantization is performed? What effect does it have on image quality?}
 
-When quantization is peformed, the coefficients of the DCT tend towards zero due to rounding. The coefficients in the upper left hand corner of the DCT, representing low frequency image information, maintains a non-zero value.
+When quantization is peformed, the coefficients of the DCT tend towards zero due to rounding. The coefficients in the upper left hand corner of the DCT, representing low frequency image information, maintain a non-zero value.
 
 Quantization reduces the information in high frequency regions of each block. This reduces high frequency detail in a local area. However, since the transform is performed on a block, some overall structure is maintained in the neghborhood of the pixel, allowing the image to still maintain high apparent sharpness.
 
-As the pixels are no longer near their original values, this approach fares poorly when measured acording the PSNR, but the subjective quality and sharpness of the image is quite good.
+As the pixels are no longer near their original values, this approach fares poorly when measured acording the PSNR. However, the subjective quality and sharpness of the image is quite good.
 
 \subsubsection{Compare the reconstructed image produced using 3Z with the original image. Why does the reconstructed image look this way?}
 
@@ -47,9 +47,9 @@ Blocking artifacts become very prominent as the level of quantization increases.
 
 \subsubsection{What conclusions can you draw about the quantization process? Explain in the context of the trade-off between compression performance and image quality.}
 
-The quantization process can reduce the number of distinct values within a 8 $\times$ 8 DCT block from 64 to much less (~4-10), which drastically reduces the number of value that must be stored. The lower number of distinct values can dramtically improve the performance of run length encoding.
+The quantization process can reduce the number of distinct values within a 8 $\times$ 8 DCT block from 64 to much less (~4-10), which drastically reduces the number of values that must be stored. The lower number of distinct values can dramtically improve the performance of run length encoding.
 
-Since a much lower number of intensity values are stored, this can introduce undesirable image artifacts such as banding and blocking. When compressing an image with JPEG compression, a large reduction in distinct image values can be obtained with a small loss in perceptual image quality, for example image Z1 appears very similar to the original image (despite the PSNR value). Examining a single DCT block @ (201,201) the block contains only 13 non-zero DCT coefficients compared to 64 for the original image, a large reduction in size.
+Since a much lower number of intensity values are stored, this can introduce undesirable image artifacts such as banding and blocking. When compressing an image with JPEG compression, a large reduction in distinct image values can be obtained with a small loss in perceptual image quality. For example image Z1 appears very similar to the original image (despite the PSNR value). Examining a single DCT block @ (201,201) the block contains only 13 non-zero DCT coefficients compared to 64 for the original image, a large reduction in size.
 
 \begin{figure}[ht]
 \centering
